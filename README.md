@@ -9,7 +9,7 @@ YLDevloperTools
 ```
 
 ### NSObject
-是否是空对象
+* 是否是空对象
 ```objc
 if ([NSObject isEmpty:object]) {
 	// object is empty
