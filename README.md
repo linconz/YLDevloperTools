@@ -90,3 +90,17 @@ NSString *md5 = [string toMD5];
 // 根据提供的最大尺寸和字体大小返回字符串展示后需要的尺寸
 CGSize size = [string boundingRectWithSize:CGSizeMake(100, 100) withFont:[UIFont systemFontOfSize:13]];
 ```
+### UIAlertController
+* 忽略必须传入UIViewController的限制,直接show在UIWindow上面
+```objc
+	UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"alert title"
+                                                                       message:@"content"
+                                                                preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消"
+                                                         style:UIAlertActionStyleCancel
+                                                       handler:^(UIAlertAction * _Nonnull action) {
+                                                       }];
+        [alert addAction:cancel];
+	[alert show];
+
+```
