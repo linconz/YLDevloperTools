@@ -8,6 +8,7 @@
 
 #import "NSString+Tools.h"
 #import "NSObject+Tools.h"
+#import<CommonCrypto/CommonDigest.h>
 
 @implementation NSString (Tools)
 
@@ -70,19 +71,115 @@
     return YES;
 }
 
-- (NSString *)stringByMatching:(NSString *)matchString
++ (NSString*)encodeString:(NSString *)string
 {
-    NSRange range = [self rangeOfString:matchString options:NSRegularExpressionSearch];
-    if (range.location != NSNotFound) {
-        return [self substringWithRange:range];
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored"-Wdeprecated-declarations"
+    NSString * encoded = (NSString*) CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(NULL, (CFStringRef)string, NULL, (CFStringRef)@"| !*'();:@&=+$,/?%#[]", kCFStringEncodingUTF8 ));
+#pragma clang diagnostic pop
+
+    return encoded;
+}
+
++ (NSString *)decodeString:(NSString*)string
+{
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored"-Wdeprecated-declarations"
+    NSString *decode  = (__bridge_transfer NSString *)CFURLCreateStringByReplacingPercentEscapesUsingEncoding(NULL, (__bridge CFStringRef)string, CFSTR(""), CFStringConvertNSStringEncodingToEncoding(NSUTF8StringEncoding));
+#pragma clang diagnostic pop
+
+    return decode;
+}
+
+- (NSString *)trim
+{
+    return [self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+}
+
+- (NSString *)ltrim
+{
+    if (![self hasPrefix:@" "]) {
+        return self;
     }
-    return @"";
+    NSUInteger blockPosition = 0;
+    for (NSUInteger i=0; i<self.length; i++) {
+        char c = [self characterAtIndex:i];
+        if (c == ' ') {
+            blockPosition = i;
+        } else {
+            break;
+        }
+    }
+    return [self substringFromIndex:blockPosition + 1];
 }
 
-+ (NSString*)encodeURL:(NSString *)string
+- (NSString *)rtrim
 {
-    NSString * encodedString = (NSString*) CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(NULL, (CFStringRef)string, NULL, (CFStringRef)@"| !*'();:@&=+$,/?%#[]", kCFStringEncodingUTF8 ));
-
-    return encodedString;
+    if (![self hasSuffix:@" "]) {
+        return self;
+    }
+    NSInteger blockPosition = [self length];
+    for (NSInteger i=[self length] - 1; i>=0 ; i--) {
+        char c = [self characterAtIndex:i];
+        if (c == ' ') {
+            blockPosition = i;
+        } else {
+            break;
+        }
+    }
+    if (blockPosition == 0) {
+        return @"";
+    }
+    return [self substringToIndex:blockPosition];
 }
+
+- (NSDate *)toDate
+{
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    return [dateFormatter dateFromString:self];
+}
+
+- (NSData *)toData
+{
+    return [self dataUsingEncoding:NSUTF8StringEncoding];
+}
+
+- (NSDictionary *)toDictionary
+{
+    NSData *jsonData = [self toData];
+    NSError *err;
+    NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:jsonData
+                                                        options:NSJSONReadingMutableContainers
+                                                          error:&err];
+    if(err) {
+        return [NSDictionary dictionary];
+    }
+    return dic;
+}
+
+- (NSString *)toMD5
+{
+    const char *cStr = [self UTF8String];
+    unsigned char digest[CC_MD5_DIGEST_LENGTH];
+    CC_MD5(cStr, (CC_LONG)strlen(cStr), digest);
+    NSMutableString *output = [NSMutableString stringWithCapacity:CC_MD5_DIGEST_LENGTH * 2];
+
+    for(int i = 0; i < CC_MD5_DIGEST_LENGTH; i++)
+        [output appendFormat:@"%02x", digest[i]];
+
+    return output;
+}
+
+- (CGSize)boundingRectWithSize:(CGSize)maxSize
+                      withFont:(UIFont *)font
+{
+    CGRect frame = [self boundingRectWithSize:maxSize
+                                      options:NSStringDrawingUsesLineFragmentOrigin
+                                   attributes:@{NSFontAttributeName: font}
+                                      context:nil];
+
+    return frame.size;
+}
+
 @end

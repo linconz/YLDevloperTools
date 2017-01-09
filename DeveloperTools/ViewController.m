@@ -16,10 +16,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSString *string = @"";
-    if ([NSString isBlankString:string]) {
-        NSLog(@"string is blank");
-    }
+
+    NSString *stringLeftBlock = @"   左边一个空格";
+    NSLog(@"string:%@", [stringLeftBlock ltrim]);
+
+    NSString *stringRightBlock = @"右边有空格  ";
+    NSLog(@"string:%@....", [stringRightBlock rtrim]);
+
+    NSString *json = @"{\"key1\":\"value\",\"count\":100}";
+    NSDictionary *dict = [json toDictionary];
+    NSLog(@"toDictionary:%@", dict);
+
+    NSString *md5 = [@"test" toMD5];
+    NSLog(@"md5:%@", md5);
+
+    CGSize size = [md5 boundingRectWithSize:CGSizeMake(100, 100) withFont:[UIFont systemFontOfSize:13]];
+    NSLog(@"md5 size is: width:%f height:%f", size.width, size.height);
+
 }
 
 
