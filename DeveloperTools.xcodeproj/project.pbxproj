@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1F36ABA41E23E44D0062BC96 /* NSObject+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F36ABA11E23E44D0062BC96 /* NSObject+Tools.m */; };
 		1F36ABA51E23E44D0062BC96 /* NSString+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F36ABA31E23E44D0062BC96 /* NSString+Tools.m */; };
+		1F36ABA91E23E4930062BC96 /* UIAlertController+Window.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F36ABA81E23E4930062BC96 /* UIAlertController+Window.m */; };
 		4D08BB381E23A33B00AB42BA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D08BB371E23A33B00AB42BA /* main.m */; };
 		4D08BB3B1E23A33B00AB42BA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D08BB3A1E23A33B00AB42BA /* AppDelegate.m */; };
 		4D08BB3E1E23A33B00AB42BA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D08BB3D1E23A33B00AB42BA /* ViewController.m */; };
@@ -22,6 +23,8 @@
 		1F36ABA11E23E44D0062BC96 /* NSObject+Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Tools.m"; sourceTree = "<group>"; };
 		1F36ABA21E23E44D0062BC96 /* NSString+Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Tools.h"; sourceTree = "<group>"; };
 		1F36ABA31E23E44D0062BC96 /* NSString+Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Tools.m"; sourceTree = "<group>"; };
+		1F36ABA71E23E4930062BC96 /* UIAlertController+Window.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+Window.h"; sourceTree = "<group>"; };
+		1F36ABA81E23E4930062BC96 /* UIAlertController+Window.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+Window.m"; sourceTree = "<group>"; };
 		4D08BB331E23A33B00AB42BA /* DeveloperTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeveloperTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D08BB371E23A33B00AB42BA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4D08BB391E23A33B00AB42BA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -49,6 +52,7 @@
 		1F36AB9E1E23E44D0062BC96 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				1F36ABA61E23E4820062BC96 /* UIKit */,
 				1F36AB9F1E23E44D0062BC96 /* Foundation */,
 			);
 			path = Tools;
@@ -63,6 +67,15 @@
 				1F36ABA31E23E44D0062BC96 /* NSString+Tools.m */,
 			);
 			path = Foundation;
+			sourceTree = "<group>";
+		};
+		1F36ABA61E23E4820062BC96 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				1F36ABA71E23E4930062BC96 /* UIAlertController+Window.h */,
+				1F36ABA81E23E4930062BC96 /* UIAlertController+Window.m */,
+			);
+			path = UIKit;
 			sourceTree = "<group>";
 		};
 		4D08BB2A1E23A33B00AB42BA = {
@@ -184,6 +197,7 @@
 				1F36ABA51E23E44D0062BC96 /* NSString+Tools.m in Sources */,
 				4D08BB381E23A33B00AB42BA /* main.m in Sources */,
 				1F36ABA41E23E44D0062BC96 /* NSObject+Tools.m in Sources */,
+				1F36ABA91E23E4930062BC96 /* UIAlertController+Window.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
