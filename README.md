@@ -93,14 +93,8 @@ CGSize size = [string boundingRectWithSize:CGSizeMake(100, 100) withFont:[UIFont
 ### UIAlertController
 * 忽略必须传入UIViewController的限制,直接show在UIWindow上面
 ```objc
-	UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"alert title"
-                                                                       message:@"content"
-                                                                preferredStyle:UIAlertControllerStyleAlert];
-        UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消"
-                                                         style:UIAlertActionStyleCancel
-                                                       handler:^(UIAlertAction * _Nonnull action) {
-                                                       }];
-        [alert addAction:cancel];
-	[alert show];
-
+UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"alert title" message:@"content" preferredStyle:UIAlertControllerStyleAlert];
+UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {}];
+[alert addAction:cancel];
+[alert show];
 ```
