@@ -7,7 +7,26 @@ YLDevloperTools
 #import 'NSObject+Tools.h'
 #import 'NSString+Tools.h'
 ```
-[TOC]
+## 目录
+* [NSObject](#1nsobject)
+	* [是否是空对象](#11是否是空对象)
+* [NSString](#2nsstring)
+	* [是否是空字符串](#21是否是空字符串)
+	* [返回一个安全字符](#22返回一个安全字符)
+	* [是否是整型数字](#23是否是整型数字)
+	* [是否是浮点数字](#24是否是浮点数字)
+	* [是否是数字](#25是否是数字)
+	* [URLEncode](#26urlencode)
+	* [URLDecode](#27urldecode)
+	* [删除首尾空格](#28删除首尾空格)
+	* [删除左侧空格](#29删除左侧空格)
+	* [删除右侧空格](#210删除右侧空格)
+	* [转换为NSDate](#211转换为nsdate)
+	* [转换为NSData](#212转换为nsdata)
+	* [转换为NSDictionary](#213转换为nsdictionary)
+	* [进行MD5加密](#214进行md5加密)
+	* [返回字符串需要显示的尺寸](#215返回字符串需要显示的尺寸)
+]
 
 ## 1.NSObject
 ### 1.1是否是空对象
