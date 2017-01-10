@@ -2,7 +2,7 @@
 //  UIColor+Tools.m
 //  DeveloperTools
 //
-//  Created by letv on 2017/1/10.
+//  Created by zhang on 2017/1/10.
 //  Copyright © 2017年 YLDeveloperTools. All rights reserved.
 //
 
@@ -12,7 +12,7 @@
 
 + (UIColor *)colorWithHexString:(NSString *)string
 {
-    return [UIColor colorWithHexString:string defaultColor:nil];
+    return [UIColor colorWithHexString:string withDefaultColor:nil];
 }
 
 + (UIColor *)colorWithHexString:(NSString *)string withDefaultColor:(UIColor *)defaultColor

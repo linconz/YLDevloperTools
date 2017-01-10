@@ -1,6 +1,19 @@
 YLDevloperTools
 ===
 一些常用基类的category，整合了一下。
+
+## 目录
+* [Foundation](#foundation)
+	* [NSObject](#nsobject)
+	* [NSString](#nsstring)
+	* [NSDictionary](#nsdictionary)
+	* [NSMutableDictionary](#nsmutabledictionary)
+* [UIKit](#uikit)
+	* [UIView](#uiview)
+	* [UIColor](#uicolor)
+	* [UIAlertController](#uialertcontroller)
+
+
 ## 使用说明
 ```objc
 // 在你的pch文件或者需要用到的地方引入对应基类的category即可
@@ -110,6 +123,50 @@ NSString *md5 = [string toMD5];
 // 根据提供的最大尺寸和字体大小返回字符串展示后需要的尺寸
 CGSize size = [string boundingRectWithSize:CGSizeMake(100, 100) withFont:[UIFont systemFontOfSize:13]];
 ```
+### NSDictionary
+检查是否是合法的NSDictionary
+
+```objc
+BOOL result = NSDictionary isLegalDictionary:dictionary];
+
+```
+检查是否是空的NSDictionary
+
+```objc
+BOOL result = [NSDictionary isEmptyDictionary:dictionary];
+```
+通过安全方式获得一个对象
+
+```objc
+NSObject *object = [dictionary safeObjectForKey:@"key"];
+```
+通过安全方式获得一个NSString
+
+```objc
+NSString *string = [dictionary safeValueForKey:@"key"];
+```
+转为JSON格式的NSData
+
+```objc
+NSData *jsonData = [dictionary toData];
+```
+转为JSON格式的NSString
+
+```objc
+NSString *jsonString = [dictionary toString];
+```
+### NSMutableDictionary
+通过安全方式设置一个object
+
+```objc
+[dictionary safeSetObject:@"value" forKey:@"key"];
+```
+通过安全方式移除一个object
+
+```objc
+[dictionary safeRemoveObjectForKey:@"key"];
+```
+
 ## UIKit
 ### UIView
 获取view的x

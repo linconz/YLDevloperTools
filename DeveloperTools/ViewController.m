@@ -23,8 +23,8 @@
     NSString *stringRightBlock = @"右边有空格  ";
     NSLog(@"string:%@....", [stringRightBlock rtrim]);
 
-    NSString *json = @"{\"key1\":\"value\",\"count\":100}";
-    NSDictionary *dict = [json toDictionary];
+    NSString *json1 = @"{\"key1\":\"value\",\"count\":100}";
+    NSDictionary *dict = [json1 toDictionary];
     NSLog(@"toDictionary:%@", dict);
 
     NSString *md5 = [@"test" toMD5];
@@ -47,9 +47,31 @@
 
     NSString *hexString = @"#64191970";
     UIColor *hexStringColor = [UIColor colorWithHexString:hexString];
+    NSLog(@"hexStringColor: %@", hexStringColor);
 
     UInt32 hexUint = 0x64191970;
     UIColor *hexUinColor = [UIColor colorWithHexAARRGGBB:hexUint];
+    NSLog(@"hexUinColor: %@", hexUinColor);
+
+    NSMutableDictionary *dictionary = (NSMutableDictionary *)[[NSObject alloc] init];
+    BOOL dictionaryIsLegal = [NSDictionary isLegalDictionary:dictionary];
+    if (!dictionaryIsLegal) {
+        NSLog(@"dictionary not legal!");
+    }
+
+    dictionary = [[NSMutableDictionary alloc] init];
+    [dictionary safeSetObject:@"value" forKey:@"key1"];
+    [dictionary safeSetObject:@"http://www.google.com" forKey:@"url"];
+    NSString *url = [dictionary safeValueForKey:@"url"];
+    if ([url isEqualToString:@"http://www.google.com"]) {
+        NSLog(@"get url:%@", url);
+    }
+    NSObject *object = [dictionary safeObjectForKey:@"object"];
+    if (object) {
+        NSLog(@"get object:%@", object);
+    }
+    NSString *json2 = [dictionary toString];
+    NSLog(@"json is:%@", json2);
 }
 
 

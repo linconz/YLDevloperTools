@@ -18,6 +18,7 @@
 		4D08BB461E23A33B00AB42BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D08BB441E23A33B00AB42BA /* LaunchScreen.storyboard */; };
 		4D08BB5C1E24AFCF00AB42BA /* UIView+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D08BB5B1E24AFCF00AB42BA /* UIView+Tools.m */; };
 		4D08BB5F1E24BA8300AB42BA /* UIColor+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D08BB5E1E24BA8300AB42BA /* UIColor+Tools.m */; };
+		4D08BB621E24EB8C00AB42BA /* NSDictionary+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D08BB611E24EB8C00AB42BA /* NSDictionary+Tools.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,8 @@
 		4D08BB5B1E24AFCF00AB42BA /* UIView+Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Tools.m"; sourceTree = "<group>"; };
 		4D08BB5D1E24BA8300AB42BA /* UIColor+Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Tools.h"; sourceTree = "<group>"; };
 		4D08BB5E1E24BA8300AB42BA /* UIColor+Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Tools.m"; sourceTree = "<group>"; };
+		4D08BB601E24EB8C00AB42BA /* NSDictionary+Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Tools.h"; sourceTree = "<group>"; };
+		4D08BB611E24EB8C00AB42BA /* NSDictionary+Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Tools.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +74,8 @@
 				1F36ABA11E23E44D0062BC96 /* NSObject+Tools.m */,
 				1F36ABA21E23E44D0062BC96 /* NSString+Tools.h */,
 				1F36ABA31E23E44D0062BC96 /* NSString+Tools.m */,
+				4D08BB601E24EB8C00AB42BA /* NSDictionary+Tools.h */,
+				4D08BB611E24EB8C00AB42BA /* NSDictionary+Tools.m */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -209,6 +214,7 @@
 				4D08BB381E23A33B00AB42BA /* main.m in Sources */,
 				1F36ABA41E23E44D0062BC96 /* NSObject+Tools.m in Sources */,
 				4D08BB5C1E24AFCF00AB42BA /* UIView+Tools.m in Sources */,
+				4D08BB621E24EB8C00AB42BA /* NSDictionary+Tools.m in Sources */,
 				1F36ABA91E23E4930062BC96 /* UIAlertController+Tools.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
