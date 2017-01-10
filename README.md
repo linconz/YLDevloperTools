@@ -4,12 +4,13 @@ YLDevloperTools
 ## 使用说明
 ```objc
 // 在你的pch文件或者需要用到的地方引入对应基类的category即可
-#import 'NSObject+Tools.h'
-#import 'NSString+Tools.h'
-#import 'UIView+Tools.h'
-#import 'UIAlertController+Tools.h'
+#import "NSObject+Tools.h"
+#import "NSString+Tools.h"
+#import "UIView+Tools.h"
+#import "UIAlertController+Tools.h"
 ```
 
+## Foundation
 ### NSObject
 是否是空对象
 
@@ -109,6 +110,7 @@ NSString *md5 = [string toMD5];
 // 根据提供的最大尺寸和字体大小返回字符串展示后需要的尺寸
 CGSize size = [string boundingRectWithSize:CGSizeMake(100, 100) withFont:[UIFont systemFontOfSize:13]];
 ```
+## UIKit
 ### UIView
 获取view的x
 
@@ -168,6 +170,36 @@ UIImage *image = [view toImage];
 ```objc
 UIImage *image = [view toImageWithRect:CGRectMake(10, 10, 50, 50)];
 ```
+### UIColor
+根据16进制字符串转为UIColor
+
+```objc
+// 支持 #AARRGGBB 或者 #RRGGBB 格式
+NSString *hexString = @"#64191970";
+UIColor *hexStringColor = [UIColor colorWithHexString:hexString];
+```
+根据16进制字符串转为UIColor,数据错误时提供默认颜色
+
+```objc
+// 支持 #AARRGGBB 或者 #RRGGBB 格式
+NSString *hexString = @"#64191970";
+UIColor *hexStringColor = [UIColor colorWithHexString:hexString withDefaultColor:[UIColor redColor]];
+```
+根据16进制数字转为UIColor,提供颜色透明度
+
+```objc
+// 0xRRGGBB
+UInt32 hexUint = 0x191970;
+UIColor *hexUinColor = [UIColor colorWithHexRRGGBB:hexUint withAlpha:1.0f];
+```
+根据16进制(含alpha)转为UIColor
+
+```objc
+// 0xAARRGGBB
+UInt32 hexUint = 0x64191970;
+UIColor *hexUinColor = [UIColor colorWithHexAARRGGBB:hexUint];
+```
+
 ### UIAlertController
 忽略必须传入UIViewController的限制,直接show在UIWindow上面
 

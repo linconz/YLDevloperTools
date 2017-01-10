@@ -44,6 +44,12 @@
     float bottom = [label bottom];
     NSLog(@"label.x is: %f, label.y is: %f, label.width is: %f, label.height is: %f", x, y, width, height);
     NSLog(@"label right is: %f, label bottom is: %f", right, bottom);
+
+    NSString *hexString = @"#64191970";
+    UIColor *hexStringColor = [UIColor colorWithHexString:hexString];
+
+    UInt32 hexUint = 0x64191970;
+    UIColor *hexUinColor = [UIColor colorWithHexAARRGGBB:hexUint];
 }
 
 
