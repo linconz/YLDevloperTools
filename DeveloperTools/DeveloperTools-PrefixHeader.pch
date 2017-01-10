@@ -12,4 +12,7 @@
 #import "NSString+Tools.h"
 #import "NSObject+Tools.h"
 
+#import "UIView+Tools.h"
+#import "UIAlertController+Tools.h"
+
 #endif /* DeveloperTools_PrefixHeader_pch */

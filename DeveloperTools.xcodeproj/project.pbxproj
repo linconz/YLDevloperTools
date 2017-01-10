@@ -9,13 +9,14 @@
 /* Begin PBXBuildFile section */
 		1F36ABA41E23E44D0062BC96 /* NSObject+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F36ABA11E23E44D0062BC96 /* NSObject+Tools.m */; };
 		1F36ABA51E23E44D0062BC96 /* NSString+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F36ABA31E23E44D0062BC96 /* NSString+Tools.m */; };
-		1F36ABA91E23E4930062BC96 /* UIAlertController+Window.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F36ABA81E23E4930062BC96 /* UIAlertController+Window.m */; };
+		1F36ABA91E23E4930062BC96 /* UIAlertController+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F36ABA81E23E4930062BC96 /* UIAlertController+Tools.m */; };
 		4D08BB381E23A33B00AB42BA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D08BB371E23A33B00AB42BA /* main.m */; };
 		4D08BB3B1E23A33B00AB42BA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D08BB3A1E23A33B00AB42BA /* AppDelegate.m */; };
 		4D08BB3E1E23A33B00AB42BA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D08BB3D1E23A33B00AB42BA /* ViewController.m */; };
 		4D08BB411E23A33B00AB42BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D08BB3F1E23A33B00AB42BA /* Main.storyboard */; };
 		4D08BB431E23A33B00AB42BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D08BB421E23A33B00AB42BA /* Assets.xcassets */; };
 		4D08BB461E23A33B00AB42BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D08BB441E23A33B00AB42BA /* LaunchScreen.storyboard */; };
+		4D08BB5C1E24AFCF00AB42BA /* UIView+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D08BB5B1E24AFCF00AB42BA /* UIView+Tools.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,8 +24,8 @@
 		1F36ABA11E23E44D0062BC96 /* NSObject+Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Tools.m"; sourceTree = "<group>"; };
 		1F36ABA21E23E44D0062BC96 /* NSString+Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Tools.h"; sourceTree = "<group>"; };
 		1F36ABA31E23E44D0062BC96 /* NSString+Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Tools.m"; sourceTree = "<group>"; };
-		1F36ABA71E23E4930062BC96 /* UIAlertController+Window.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+Window.h"; sourceTree = "<group>"; };
-		1F36ABA81E23E4930062BC96 /* UIAlertController+Window.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+Window.m"; sourceTree = "<group>"; };
+		1F36ABA71E23E4930062BC96 /* UIAlertController+Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+Tools.h"; sourceTree = "<group>"; };
+		1F36ABA81E23E4930062BC96 /* UIAlertController+Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+Tools.m"; sourceTree = "<group>"; };
 		4D08BB331E23A33B00AB42BA /* DeveloperTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeveloperTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D08BB371E23A33B00AB42BA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4D08BB391E23A33B00AB42BA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -36,6 +37,8 @@
 		4D08BB451E23A33B00AB42BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D08BB471E23A33C00AB42BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D08BB581E23A57400AB42BA /* DeveloperTools-PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DeveloperTools-PrefixHeader.pch"; sourceTree = "<group>"; };
+		4D08BB5A1E24AFCF00AB42BA /* UIView+Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Tools.h"; sourceTree = "<group>"; };
+		4D08BB5B1E24AFCF00AB42BA /* UIView+Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Tools.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,8 +75,10 @@
 		1F36ABA61E23E4820062BC96 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				1F36ABA71E23E4930062BC96 /* UIAlertController+Window.h */,
-				1F36ABA81E23E4930062BC96 /* UIAlertController+Window.m */,
+				1F36ABA71E23E4930062BC96 /* UIAlertController+Tools.h */,
+				1F36ABA81E23E4930062BC96 /* UIAlertController+Tools.m */,
+				4D08BB5A1E24AFCF00AB42BA /* UIView+Tools.h */,
+				4D08BB5B1E24AFCF00AB42BA /* UIView+Tools.m */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -197,7 +202,8 @@
 				1F36ABA51E23E44D0062BC96 /* NSString+Tools.m in Sources */,
 				4D08BB381E23A33B00AB42BA /* main.m in Sources */,
 				1F36ABA41E23E44D0062BC96 /* NSObject+Tools.m in Sources */,
-				1F36ABA91E23E4930062BC96 /* UIAlertController+Window.m in Sources */,
+				4D08BB5C1E24AFCF00AB42BA /* UIView+Tools.m in Sources */,
+				1F36ABA91E23E4930062BC96 /* UIAlertController+Tools.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

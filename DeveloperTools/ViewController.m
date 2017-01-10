@@ -33,6 +33,17 @@
     CGSize size = [md5 boundingRectWithSize:CGSizeMake(100, 100) withFont:[UIFont systemFontOfSize:13]];
     NSLog(@"md5 size is: width:%f height:%f", size.width, size.height);
 
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
+    [label setBackgroundColor:[UIColor grayColor]];
+    [self.view addSubview:label];
+    float x = [label x];
+    float y = [label y];
+    float width = [label width];
+    float height = [label height];
+    float right = [label right];
+    float bottom = [label bottom];
+    NSLog(@"label.x is: %f, label.y is: %f, label.width is: %f, label.height is: %f", x, y, width, height);
+    NSLog(@"label right is: %f, label bottom is: %f", right, bottom);
 }
 
 

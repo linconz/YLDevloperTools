@@ -1,5 +1,5 @@
 //
-//  UIAlertController+Window.h
+//  UIAlertController+Tools.h
 //  DeveloperTools
 //
 //  Created by zhang on 2017/1/9.

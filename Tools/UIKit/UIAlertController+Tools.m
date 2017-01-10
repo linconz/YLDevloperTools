@@ -1,12 +1,12 @@
 //
-//  UIAlertController+Window.m
+//  UIAlertController+Tools.m
 //  DeveloperTools
 //
 //  Created by zhang on 2017/1/9.
 //  Copyright © 2017年 YLDeveloperTools. All rights reserved.
 //
 
-#import "UIAlertController+Window.h"
+#import "UIAlertController+Tools.h"
 #import <objc/runtime.h>
 
 @interface UIAlertController (Private)
@@ -29,7 +29,7 @@
 
 @end
 
-@implementation UIAlertController (Window)
+@implementation UIAlertController (Tools)
 
 - (void)show {
     [self show:YES];
