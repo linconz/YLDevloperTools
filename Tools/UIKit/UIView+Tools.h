@@ -11,62 +11,46 @@
 @interface UIView (Tools)
 
 /**
- 获取view的x
-
- @return view.frame.origin.x
+ 获取view的x, 实际获取的是 view.frame.origin.x
  */
-- (float)x;
+@property (nonatomic, assign) float x;
 
 /**
- 获取view的y
-
- @return view.frame.origin.y
+ 获取view的y, 实际获取的是 view.frame.origin.y
  */
-- (float)y;
+@property (nonatomic, assign) float y;
 
 /**
- 获取view的width
-
- @return view.frame.size.width
+ 获取view的width, 实际获取的是 view.frame.size.width
  */
-- (float)width;
+@property (nonatomic, assign) float width;
 
 /**
- 获取view的height
-
- @return view.frame.size.height
+ 获取view的height, 实际获取的是 view.frame.size.height
  */
-- (float)height;
+@property (nonatomic, assign) float height;
 
 /**
- 获取view的 x + 宽度
- right = view.left + view.width
-
- @return right
+ 获取view的right, 实际获取的是 view.frame.origin.x + view.frame.size.width
+ 对right赋值时, 会相对于父view设置 view.frame.size.width
  */
-- (float)right;
+@property (nonatomic, assign) float right;
 
 /**
- 获取view的 y + 高度
- bottom = view.top + view.height
-
- @return bottom
+ 获取view的bottom, 实际获取的是 view.frame.origin.y + view.frame.size.height
+ 对bottom赋值时, 会相对于父view设置 view.frame.size.height
  */
-- (float)bottom;
+@property (nonatomic, assign) float bottom;
 
 /**
- 获取view的size
-
- @return view.frame.size
+ 获取view的size, 实际获取的是 view.frame.size
  */
-- (CGSize)size;
+@property (nonatomic, assign) CGSize size;
 
 /**
- 获取view的origin
-
- @return view.frame.origin
+ 获取view的origin, 实际获取的是 view.frame.origin
  */
-- (CGPoint)origin;
+@property (nonatomic, assign) CGPoint origin;
 
 /**
  UIView转换为UIImage

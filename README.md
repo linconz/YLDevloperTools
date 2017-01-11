@@ -19,7 +19,9 @@ YLDevloperTools
 // 在你的pch文件或者需要用到的地方引入对应基类的category即可
 #import "NSObject+Tools.h"
 #import "NSString+Tools.h"
+#import "NSDictionary +Tools.h"
 #import "UIView+Tools.h"
+#import "UIColor+Tools.h"
 #import "UIAlertController+Tools.h"
 ```
 

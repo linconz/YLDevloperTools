@@ -36,7 +36,8 @@
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
     [label setBackgroundColor:[UIColor grayColor]];
     [self.view addSubview:label];
-    float x = [label x];
+    float x = label.x;
+    label.x = 300;
     float y = [label y];
     float width = [label width];
     float height = [label height];
