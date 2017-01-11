@@ -174,50 +174,68 @@ NSString *jsonString = [dictionary toString];
 获取view的x
 
 ```objc
-// 等于使用view.frame.origin.x
-float x = [view x];
+// 等于使用 view.frame.origin.x
+float x = view.x;
+// 修改 view.x
+view.x = 16;
 ```
 获取view的y
 
 ```objc
-// 等于使用view.frame.origin.y
-float y = [view y];
+// 等于使用 view.frame.origin.y
+float y = view.y;
+// 修改 view.y
+view.y = 16;
 ```
 获取view的width
 
 ```objc
-// 等于使用view.frame.size.width
-float width = [view width];
+// 等于使用 view.frame.size.width
+float width = view.width;
+// 修改 view.width
+view.width = 100;
 ```
 获取view的height
 
 ```objc
-// 等于使用view.frame.size.height
-float height = [view height];
+// 等于使用 view.frame.size.height
+float height = view.height
+// 修改 view.height;
+view.height = 100;
 ```
 获取view的right
+相对于父view(view.superview)的右边距
 
 ```objc
-// 等于使用view.frame.origin.x + view.frame.size.width
-float right = [view right];
+// 等于使用 view.frame.origin.x + view.frame.size.width
+float right = view.right;
+// 修改 view.right
+view.right = 100;
 ```
 获取view的bottom
+相对于父view(view.superview)的底边距
 
 ```objc
-// 等于使用view.frame.origin.y + view.frame.size.height
-float bottom = [view bottom];
+// 等于使用 view.frame.origin.y + view.frame.size.height
+float bottom = view.bottom;
+// 修改 view.bottom
+view.bottom = 100;
 ```
 获取view的size
 
 ```objc
-// 等于使用view.frame.size
-CGSize size = [view size];
+// 等于使用 view.frame.size
+CGSize size = view.size;
+// 修改 view.size
+view.size = CGSize(100, 100);
 ```
 获取view的origin
 
 ```objc
-// 等于使用view.frame.origin
-CGPoint origin = [view origin];
+// 等于使用 view.frame.origin
+CGPoint origin = view.origin;
+// 修改 view.origin
+view.origin = CGPoint(10, 10);
 ```
 UIView转为UIImage
 
