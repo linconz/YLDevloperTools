@@ -8,6 +8,8 @@ YLDevloperTools
 	* [NSString](#nsstring)
 	* [NSDictionary](#nsdictionary)
 	* [NSMutableDictionary](#nsmutabledictionary)
+	* [NSArray](#nsarray)
+	* [NSMutableArray](#nsmutablearray)
 * [UIKit](#uikit)
 	* [UIView](#uiview)
 	* [UIColor](#uicolor)
@@ -149,13 +151,17 @@ NSString *string = [dictionary safeValueForKey:@"key"];
 ```
 转为JSON格式的NSData
 
+**这个方法不支持自定义的NSObject**
+
 ```objc
 NSData *jsonData = [dictionary toData];
 ```
 转为JSON格式的NSString
 
+**这个方法不支持自定义的NSObject**
+
 ```objc
-NSString *jsonString = [dictionary toString];
+NSString *jsonString = [dictionary toJSON];
 ```
 ### NSMutableDictionary
 通过安全方式设置一个object
@@ -167,6 +173,33 @@ NSString *jsonString = [dictionary toString];
 
 ```objc
 [dictionary safeRemoveObjectForKey:@"key"];
+```
+### NSArray
+转为JSON格式的NSData
+
+**这个方法不支持自定义的NSObject**
+
+```objc
+NSData *jsonData = [array toData];
+```
+转为JSON格式的NSString
+
+**这个方法不支持自定义的NSObject**
+
+```objc
+NSString *jsonString = [array toJSON];
+```
+通过安全方式返回一个数组中的对象
+
+```objc
+id object = [array safeObjectAtIndex:4];
+```
+### NSMutableArray
+通过安全方式增加一个对象到数组中
+
+```objc
+NSOjbect *object = [[NSObject alloc] init];
+[array safeAddObject:object];
 ```
 
 ## UIKit

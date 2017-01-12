@@ -73,6 +73,17 @@
     }
     NSString *json2 = [dictionary toString];
     NSLog(@"json is:%@", json2);
+
+    NSMutableArray *array = [[NSMutableArray alloc] init];
+    [array safeAddObject:@"string 1"];
+    [array safeAddObject:@"string 2"];
+    NSDictionary *arrayDict = @{@"key1": @"value1", @"key2": @"value2"};
+    [array safeAddObject:arrayDict];
+
+    NSString *arrayJsonString = [array toJSON];
+    NSLog(@"array json string: %@", arrayJsonString);
+    [array removeAllObjects];
+
 }
 
 

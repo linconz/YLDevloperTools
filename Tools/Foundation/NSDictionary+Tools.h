@@ -49,6 +49,7 @@
 /**
  转为JSON格式的NSData
 
+ @warning 不支持自定义的NSObject对象
  @return NSData data
  */
 - (NSData *)toData;
@@ -56,9 +57,10 @@
 /**
  转为JSON格式的NSString
 
+ @warning 不支持自定义的NSObject对象
  @return string
  */
-- (NSString *)toString;
+- (NSString *)toJSON;
 
 @end
 

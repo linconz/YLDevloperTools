@@ -51,7 +51,7 @@
     return [[NSData alloc] init];
 }
 
-- (NSString *)toString
+- (NSString *)toJSON
 {
     NSData *data = [self toData];
     NSString *result = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];

@@ -19,6 +19,7 @@
 		4D08BB5C1E24AFCF00AB42BA /* UIView+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D08BB5B1E24AFCF00AB42BA /* UIView+Tools.m */; };
 		4D08BB5F1E24BA8300AB42BA /* UIColor+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D08BB5E1E24BA8300AB42BA /* UIColor+Tools.m */; };
 		4D08BB621E24EB8C00AB42BA /* NSDictionary+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D08BB611E24EB8C00AB42BA /* NSDictionary+Tools.m */; };
+		4D5A83E91E27652300D5BC05 /* NSArray+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D5A83E81E27652300D5BC05 /* NSArray+Tools.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,8 @@
 		4D08BB5E1E24BA8300AB42BA /* UIColor+Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Tools.m"; sourceTree = "<group>"; };
 		4D08BB601E24EB8C00AB42BA /* NSDictionary+Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Tools.h"; sourceTree = "<group>"; };
 		4D08BB611E24EB8C00AB42BA /* NSDictionary+Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Tools.m"; sourceTree = "<group>"; };
+		4D5A83E71E27652300D5BC05 /* NSArray+Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Tools.h"; sourceTree = "<group>"; };
+		4D5A83E81E27652300D5BC05 /* NSArray+Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Tools.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +79,8 @@
 				1F36ABA31E23E44D0062BC96 /* NSString+Tools.m */,
 				4D08BB601E24EB8C00AB42BA /* NSDictionary+Tools.h */,
 				4D08BB611E24EB8C00AB42BA /* NSDictionary+Tools.m */,
+				4D5A83E71E27652300D5BC05 /* NSArray+Tools.h */,
+				4D5A83E81E27652300D5BC05 /* NSArray+Tools.m */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -209,6 +214,7 @@
 			files = (
 				4D08BB3E1E23A33B00AB42BA /* ViewController.m in Sources */,
 				4D08BB3B1E23A33B00AB42BA /* AppDelegate.m in Sources */,
+				4D5A83E91E27652300D5BC05 /* NSArray+Tools.m in Sources */,
 				1F36ABA51E23E44D0062BC96 /* NSString+Tools.m in Sources */,
 				4D08BB5F1E24BA8300AB42BA /* UIColor+Tools.m in Sources */,
 				4D08BB381E23A33B00AB42BA /* main.m in Sources */,
